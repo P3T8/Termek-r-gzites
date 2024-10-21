@@ -1,0 +1,48 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyümölcs Nyilvántartás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gyümölcs Nyilvántartás</h1>
+        
+        <!-- Gyümölcs rögzítése -->
+        <form id="fruit-form">
+            <div class="form-group">
+                <label for="name">Gyümölcs neve:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Egységár (HUF):</label>
+                <input type="number" id="price" name="price" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="unit">Mennyiségi egység:</label>
+                <select id="unit" name="unit" required>
+                    <option value="kg">Kilogramm (kg)</option>
+                    <option value="db">Darab (db)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Mennyiség:</label>
+                <input type="number" id="quantity" name="quantity" required min="1">
+            </div>
+            <button type="submit">Rögzítés</button>
+            <div id="message"></div>
+        </form>
+        
+        <!-- Gyümölcsök listája Flexbox-szal -->
+        <h2>Rögzített Gyümölcsök</h2>
+        <div id="fruit-list" class="fruit-list">
+            <!-- Gyümölcsök itt jelennek meg -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
